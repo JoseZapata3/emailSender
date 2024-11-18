@@ -1,0 +1,21 @@
+{
+  "name": "api-email-sahi",
+  "version": "1.0.0",
+  "description": "ths is a api for sending emails",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "email",
+    "sahi"
+  ],
+  "author": "jose.zapata",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "nodemailer": "^6.9.16"
+  }
+}

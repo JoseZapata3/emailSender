@@ -18,7 +18,7 @@ const sendMail = (req, res = response) => {
         from: process.env.MAIL,
         to: req.body.to,
         subject: "Recordatorio de cita",
-        html: "<h1>Hola</h1> <p>Este es un recordatorio de cita</p>"
+        html: `<h1>Hola ${req.body.user} 👋</h1><p>Recuerda estar 20 minutos antes de la hora agendada con tus documentos y órdenes médicas para que no pierdas la oportunidad de ingresar a tiempo y sin demoras injustificadas a tu cita.</p>`
     }
 
     transporter.sendMail(mailOptions, (error, info) => {

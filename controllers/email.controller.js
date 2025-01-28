@@ -18,217 +18,18 @@ const sendMail = (req, res = response) => {
         from: process.env.MAIL,
         to: req.body.to,
         subject: "Recordatorio de cita",
-        html: `<div> 
-       <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-
-        *{
-            box-sizing: border-box;
-            font-family: "Manrope", serif;
-            font-weight: 400;
-        }
-
-        html{
-            scroll-behavior: smooth;
-        }
-
-        h1, h2, h3 {
-            all: unset;
-        }
-
-        hr{
-            border: 1px solid #D0D0D0;
-            margin: 8px 0;
-            width: 95%;
-        }
-
-        ul{
-            padding-left: 20px;
-        }
-
-        .separator{
-            width: 90%;
-            margin: 16px 32px;
-        }
-
-        header#main {
-            background-image: url("../assets/header-coverage.webp");
-            width: 100%;
-            height: 143px;
-        }
-
-        header#sub-header{
-            background-image: url("../assets/article-coverage.webp");
-            margin: 16px;
-            padding: 68px 30px;
-            width: 568px;
-            height: 246px;
-            font-size: 37px;
-            line-height: 39px;
-        }
-
-        .sub-title{
-            font-size: 15.92px;
-            line-height: 21.74px;
-            padding-top: 12px;
-        }
-
-        .coverage{
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50% 100%;
-            padding: 0px 20px;
-            color: #FFFFFF;
-            font-weight: 600;
-        }
-
-        #introduction-content{
-            color: #383838; 
-            font-size: 14px; 
-            font-weight: 400; 
-            font-family: 'Manrope', serif; 
-            line-height: 22.4px; 
-            width: 30%; 
-            padding-left: 4px;
-        }
-
-        #introduction-content ul{
-            padding-left: 20px;
-        }
-
-        #introduction-greeting{
-            width: 30%; 
-            padding-right: 4px; 
-            padding-top: 15px; 
-            text-align: start; 
-            vertical-align: top; 
-            font-size: 60px; 
-            line-height: 57.37px; 
-            font-weight: 400; 
-            font-family: 'Manrope', serif; 
-            color:#1C1C1C;
-        }
-
-        #btn-lets-chat{
-            display: block;
-            margin: 20px auto;
-            padding: 12px 22px; 
-            background-color: #1313B6;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 60px;
-            height: 46px;
-            width: 123px;
-            font-size: 16px;
-            line-height: 21.86px;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        #arrow{
-            display: block;
-            margin: auto;
-            height: 23px;
-            width: 16px;
-        }
-
-        .post{
-            padding: 43px 19px;
-        }
-
-        .article-info{
-            vertical-align: top;
-        }
-
-        .article-number{
-            font-size: 96px;
-            line-height: 131.14px;
-            color: #6B6B6B;
-        }
-
-        .article-title{
-            font-size: 46px;
-            line-height: 52px;
-            color: #1313C3;
-        }
-
-        .article-subtitle{
-            font-size: 23.3px;
-            line-height: 31.83px;
-            color: #1313C3;
-            margin-top: 6px;
-        }
-
-        .article-text{
-            font-family: "Inter", serif;
-            font-size: 14px;
-            line-height: 16.94px;
-            color: #6B6B6B;
-            text-align: justify;
-            word-spacing: -0.5px;
-            padding-right: 15px;
-            margin: 4px 0;
-        }
-
-        .learn-more{
-            font-size: 14px;
-            line-height: 19.12px;
-            font-weight: 700;
-            color: #1313B6;
-        }
-
-        .article-image{
-            height: 367px;
-            width: 276px;
-        }
-
-        footer{
-            background-color: #1313C3;
-            color: #FFFFFF;
-        }
-
-        #social-network-information{
-            height: 144px;
-            font-size: 18.25px;
-            line-height: 25.02px;
-            padding: 47px 32px;
-        }
-
-        #social-network-information span{
-            font-weight: 800;
-        }
-
-        #company-information{
-            font-size: 17px;
-            line-height: 23.22px;
-            color: #F4F2E9;
-            padding: 16px;
-        }
-
-        .company-info{
-            width: 130px;
-            vertical-align: top;
-        }
-
-        .company-info span{
-            font-size: 30px;
-            line-height: 40.98px;
-        }
-
-        #footer-information{
-            padding: 32px;
-        }
-
-        #footer-information p{
-            font-size: 16px;
-            line-height: 21.86px;
-            font-weight: 700;
-        }
-    </style>
-    <header id="main" class="coverage">
+        html: `<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>newsletter template</title>
+</head>
+<body style="margin:0; padding: 0; max-width: 600px;">
+    <header id="main" class="coverage" style="background-image: url('../assets/header-coverage.webp'); width: 600px; height: 143px; background-repeat: no-repeat; background-size: cover; background-position: 50% 100%; color: #FFFFFF; font-weight: 600; font-family: 'Manrope', serif;">
         <table style="width: 100%; padding: 57px 0;">
             <tbody>
                 <tr >
@@ -242,29 +43,29 @@ const sendMail = (req, res = response) => {
                             <path d="M97.2748 7.17181H91.4703L87.7674 18.4849L84.4649 7.17181H78.5604L76.0584 14.5454L75.8583 14.9496L75.6581 14.1414L75.3579 12.7274V12.5252C75.3579 12.5252 75.3579 12.3233 75.3579 12.2223C75.3579 12.1213 75.3579 12.0203 75.3579 11.9192C75.3579 11.9192 75.3579 11.7172 75.3579 11.6162C74.5573 9.19192 72.2555 7.37379 69.5534 7.37379C66.8514 7.37379 64.6497 9.09081 63.8491 11.5151C63.8491 11.8181 63.749 12.0202 63.6489 12.3232C63.2486 13.9394 62.9484 15.4546 62.9484 15.9597L61.8475 22.4242C61.8475 22.4242 61.8475 22.5252 61.8475 22.6262C61.7474 22.9292 61.4472 23.2323 61.0469 23.2323C60.6466 23.2323 60.7467 23.2322 60.6466 23.1312C60.4464 23.0302 60.2463 22.6262 60.1462 22.1211L58.7451 15.3535C58.7451 14.9495 58.6451 14.6464 58.545 14.3434C58.0446 12.7272 56.9438 11.4142 55.4426 10.7072C54.642 10.3031 53.7413 10.101 52.7405 10.101C49.538 10.101 47.2363 12.4242 46.6358 15.6566C46.5357 15.9596 46.4357 16.3636 46.4357 16.6667L45.635 20.606C45.4349 21.4141 45.635 22.2223 46.1354 22.8284C46.5357 23.5355 47.2363 23.9393 48.0369 24.1413C48.8375 24.3434 49.538 24.1414 50.2386 23.7374C50.839 23.3334 51.3394 22.6264 51.4395 21.8183L52.2401 17.7779C52.2401 17.2728 52.3402 16.9698 52.7405 16.7678C52.8406 16.7678 53.0407 16.6667 53.1408 16.6667C53.4411 16.6667 53.8414 16.8688 53.9414 17.2728C53.9414 17.2728 53.9414 17.2728 53.9414 17.4748L55.0423 23.9394C55.5427 27.0707 58.0446 29.293 61.147 29.293H61.5473C61.5473 29.293 61.7474 29.293 61.8475 29.293C61.8475 29.293 61.9476 29.293 62.0477 29.293C62.0477 29.293 62.1477 29.293 62.2478 29.293C62.2478 29.293 62.448 29.293 62.5481 29.293C62.5481 29.293 62.6481 29.293 62.7482 29.293C62.7482 29.293 62.8483 29.293 62.9484 29.293C62.9484 29.293 63.1485 29.293 63.2486 29.293C63.2486 29.293 63.4487 29.293 63.5488 29.293C63.6489 29.293 63.749 29.2929 63.8491 29.1919C63.9491 29.1919 64.0492 29.192 64.1493 29.091C64.1493 29.091 64.3494 29.0909 64.3494 28.9899C64.3494 28.9899 64.4495 28.99 64.5496 28.889C64.5496 28.889 64.6497 28.889 64.7497 28.889C64.7497 28.889 64.7497 28.889 64.8498 28.889C64.8498 28.889 64.9499 28.8889 65.05 28.7879C65.05 28.7879 65.2501 28.687 65.2501 28.5859C65.2501 28.5859 65.4503 28.485 65.4503 28.384C65.5504 28.384 65.6504 28.1819 65.7505 28.0809C66.4511 27.3738 66.8514 26.5656 67.0515 25.6565C67.4518 23.8383 67.8521 22.1211 67.9522 21.6161L69.0531 15.1515C69.0531 15.1515 69.0531 15.0506 69.0531 14.9496C69.1531 14.6465 69.4534 14.3434 69.8537 14.3434C70.254 14.3434 70.1539 14.3435 70.254 14.4445C70.3541 14.4445 70.4541 14.6464 70.5542 14.8484C70.5542 15.0505 70.6543 15.2526 70.7544 15.4546L73.2563 27.4747C73.5565 28.7879 74.6574 29.7981 75.9584 29.8991H76.5588C76.759 29.8991 76.9591 29.899 77.1593 29.798C78.1601 29.495 78.8606 28.788 79.2609 27.8789C79.4611 27.4749 79.5611 27.1718 79.6612 26.8688C79.9615 26.1617 81.5627 21.9193 82.4634 19.495L85.5658 30H91.07L94.8729 20.202L97.8752 30H104.38L97.9753 8.28278L97.2748 7.17181Z" fill="white"/>
                         </svg>
                     </td>
-                    <td style="font-family: 'Manrope', serif; font-size: 13px; line-height: 17.76px; font-weight: 600; color: #FFFFFF; text-align: end; padding: 0px 16px;">
+                    <td style="font-size: 13px; line-height: 17.76px; font-weight: 600; color: #FFFFFF; text-align: end; padding: 0px 16px;">
                         Effective Software Engineering.
                     </td>
                 </tr>
             </tbody>
         </table>
     </header>
-    <main>
+    <main style="font-family: 'Manrope', serif;">
         <section style="padding: 32px;">
             <table id="introduction" style="width: 100%;">
                 <tbody>
                     <tr>
-                        <td rowspan="1" id="introduction-greeting">
+                        <td rowspan="1" id="introduction-greeting" style="width: 30%; padding-right: 4px; padding-top: 15px; text-align: start; vertical-align: top; font-size: 60px; line-height: 57.37px; font-weight: 400; color:#1C1C1C;">
                             Hi there!
                         </td>
-                        <td rowspan="1" id="introduction-content">
+                        <td rowspan="1" id="introduction-content" style="color: #383838;  font-size: 14px; font-weight: 400; line-height: 22.4px; width: 30%; padding-left: 4px;">
                             <p>
                                 I hope you are doing well. I’m [Your Name] from the kommit team, where we’ve been supporting companies like [Recipient's Company] for over 15 years.
                             </p>
                             <P>
                                 I've been following the trajectory of [Recipient's Company] for a while now and noticed that you're hiring IT staff; I believe we have a great opportunity to support your efforts. Based on your current needs, I’m confident we can help you
                             </P>
-                            <ul>
+                            <ul style="padding-left: 20px;">
                                 <li>Overcome engineering challenges</li>
                                 <li>Scale IT operations efficiently</li>
                                 <li>Drive forward innovation projects</li>
@@ -273,79 +74,79 @@ const sendMail = (req, res = response) => {
                     </tr>
                 </tbody>
             </table>
-            <a href="#" id="btn-lets-chat">
+            <a href="#" id="btn-lets-chat" style="text-align:center; display: block; margin: 20px auto; padding-top: 10px;  background-color: #1313B6; color: #FFFFFF; border: none; border-radius: 60px; height: 35px; width: 123px; font-size: 16px; line-height: 21.86px; font-weight: 500; text-decoration: none;">
                 Let’s chat!
             </a>
-            <a id="arrow" href="#sub-header">
+            <a id="arrow" href="#sub-header" style="display: block; margin: auto; height: 23px; width: 16px;">
                 <svg width="16" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.06441 22.9489C7.65217 22.9489 7.29146 22.7445 7.03382 22.4378L0.386473 15.8444C-0.128825 15.3333 -0.128825 14.5156 0.386473 14.0556C0.901771 13.5444 1.72625 13.5444 2.19002 14.0556L6.77617 18.6045L6.77617 1.27778C6.77617 0.562223 7.34299 3.20972e-07 8.06441 3.52507e-07C8.78583 3.84041e-07 9.35266 0.562223 9.35266 1.27778L9.35266 18.6045L13.8357 14.1578C14.351 13.6467 15.1755 13.6467 15.6393 14.1578C15.8969 14.4133 16 14.72 16 15.0778C16 15.4356 15.8969 15.7422 15.6393 15.9978L9.04348 22.54C8.78583 22.7956 8.47665 23 8.06441 23L8.06441 22.9489Z" fill="#1313C3"/>
                 </svg>                
             </a>
         </section>
         <section>
-            <header id="sub-header" class="coverage">
+            <header id="sub-header" class="coverage" style="background-image: url('../assets/article-coverage.webp'); margin: 16px; width: 568px; height: 246px; font-size: 37px; line-height: 39px; background-repeat: no-repeat; background-size: cover; background-position: 50% 100%; color: #FFFFFF; font-weight: 600;">
                 <table>
                     <tbody>
                         <tr>
-                            <td>
+                            <td style="padding-top: 60px; padding-left: 24px;">
                                 Effective <br>
                                 Software Engineering  
                             </td>
                         </tr>
                         <tr>
-                            <td class="sub-title">
+                            <td class="sub-title" style="padding-left: 24px; font-size: 15.92px; line-height: 21.74px; padding-top: 12px; font-weight: 400;">
                                 Get your engineering on track in 15 days
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </header>
-            <article class="post">
-                <table cellspacing="8">
+            <article class="post" style="width: 100%;">
+                <table style="margin: 16px;">
                     <tbody>
                         <tr>
-                            <td class="article-info">
-                                <h2 class="article-title">
-                                    <span class="article-number">01.</span>
+                            <td class="article-info" style="vertical-align: top; width: 273px;">
+                                <h2 class="article-title" style="all: unset;  font-size: 46px; line-height: 52px; color: #1313C3;">
+                                    <span class="article-number" style="font-size: 96px; line-height: 131.14px; color: #6B6B6B;">01.</span>
                                     <br>
                                     Laying the Groundwork: 
                                 </h2>
-                                <h3 class="article-subtitle">
+                                <h3 class="article-subtitle" style="all: unset; font-size: 23.3px; line-height: 31.83px; color: #1313C3; margin-top: 6px;">
                                     Preparing for IT Projects.
                                 </h3>
-                                <hr>
-                                <p class="article-text">
+                                <hr style="border: 1px solid #D0D0D0; margin: 8px 0; width: 95%;">
+                                <p class="article-text" style="font-family: 'Inter', serif; font-size: 14px; line-height: 16.94px; color: #6B6B6B; text-align: justify; word-spacing: -0.5px; padding-right: 15px; margin: 4px 0;">
                                     Don’t rush to deploy technology, invest in your company growth.
                                 </p>
-                                <a href="#" class="learn-more">
+                                <a href="#" class="learn-more" style="font-size: 14px; line-height: 19.12px; font-weight: 700; color: #1313B6;">
                                     Learn more
                                 </a>
                             </td>
                             <td>
-                                <img class="article-image" src="./assets/image-article-1.webp" alt="image of a person working on a computer" />
+                                <img style="width: 273px; height: 380px; padding-left: 12px;" class="article-image" src="./assets/image-article-1.webp" alt="image of a person working on a computer" />
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </article>
-            <hr class="separator">
-            <article class="post">
-                <table cellspacing="8">
+            <hr class="separator" style="width: 90%; margin: 40px 32px;">
+            <article class="post" style="width: 100%;">
+                <table style="margin: 16px;">
                     <tbody>
                         <tr>
                             <td>
-                                <img class="article-image" src="./assets/image-article-2.webp" alt="KommitOS" />
+                                <img style="width: 276px; height: 367px; padding-right: 10px;" class="article-image" src="./assets/image-article-2.webp" alt="KommitOS" />
                             </td>
-                            <td class="article-info">
-                                <h2 class="article-title">
-                                    <span class="article-number">02.</span>
+                            <td class="article-info" style="vertical-align: top; width: 273px;">
+                                <h2 class="article-title" style="all: unset; font-size: 46px; line-height: 52px; color: #1313C3;">
+                                    <span class="article-number" style="font-size: 96px; line-height: 131.14px; color: #6B6B6B;">02.</span>
                                     Operational Excellence
                                 </h2>
-                                <hr>
-                                <p class="article-text">
+                                <hr style="border: 1px solid #D0D0D0; margin: 8px 0; width: 95%;">
+                                <p class="article-text" style="font-family: 'Inter', serif; font-size: 14px; line-height: 16.94px; color: #6B6B6B; text-align: justify; word-spacing: -0.5px; padding-right: 15px; margin: 4px 0;">
                                     Explore in depth how our operations remain well-organized, efficient, and scalable.
                                 </p>
-                                <a href="#" class="learn-more">
+                                <a href="#" class="learn-more" style="font-size: 14px; line-height: 19.12px; font-weight: 700; color: #1313B6;">
                                     Learn more
                                 </a>
                             </td>
@@ -355,9 +156,9 @@ const sendMail = (req, res = response) => {
             </article>
         </section>
     </main>
-    <footer>
-        <section id="social-network-information">
-            <table cellspacing="8">
+    <footer style="background-color: #1313C3; color: #FFFFFF; font-family: 'Manrope', serif;">
+        <section id="social-network-information" style="height: 144px;">
+            <table cellspacing="8" style="padding: 47px 0px 0 32px;">
                 <tbody>
                     <tr>
                         <td>
@@ -377,8 +178,8 @@ const sendMail = (req, res = response) => {
                                 </defs>
                             </svg> 
                         </td>
-                        <td style="vertical-align: top;">
-                            <span>
+                        <td style="vertical-align: top; font-size: 18.25px; line-height: 25.02px;">
+                            <span style="font-weight: 800;">
                                 @kommit 
                             </span>
                             <br>
@@ -388,34 +189,34 @@ const sendMail = (req, res = response) => {
                 </tbody>
             </table>
         </section>
-        <hr class="separator">
-        <section id="company-information">
+        <hr class="separator" style="width: 90%; margin: 16px 32px;">
+        <section id="company-information" style="font-size: 17px; line-height: 23.22px; color: #F4F2E9; padding: 16px;">
             <table cellspacing="18">
                 <tbody>
                     <tr>
-                        <td class="company-info">
-                            <span>
+                        <td class="company-info" style="width: 130px; vertical-align: top;">
+                            <span style="font-size: 30px; line-height: 40.98px;">
                                 +3
                             </span>
                             <br>
                             Awarded <br> Grants
                         </td>
-                        <td class="company-info">
-                            <span>
+                        <td class="company-info" style="width: 130px; vertical-align: top;">
+                            <span style="font-size: 30px; line-height: 40.98px;">
                                 +230
                             </span>
                             <br>
                             Engineers trained in our Bootcamp
                         </td>
-                        <td class="company-info">
-                            <span>
+                        <td class="company-info" style="width: 130px; vertical-align: top;">
+                            <span style="font-size: 30px; line-height: 40.98px;">
                                 +50
                             </span>
                             <br>
                             Engineers working  with <br> our clients
                         </td>
-                        <td class="company-info">
-                            <span>
+                        <td class="company-info" style="width: 130px; vertical-align: top;">
+                            <span style="font-size: 30px; line-height: 40.98px;">
                                 98.9%
                             </span>
                             <br>
@@ -425,9 +226,9 @@ const sendMail = (req, res = response) => {
                 </tbody>
             </table>                  
         </section>
-        <hr class="separator">
+        <hr class="separator" style="width: 90%; margin: 16px 32px;">
         <section id="footer-information">
-            <table style="width: 100%;">
+            <table style="width: 100%; padding: 32px;">
                 <tbody>
                     <tr>
                         <td style="width: 50%;">
@@ -441,7 +242,7 @@ const sendMail = (req, res = response) => {
                             </svg>
                         </td>
                         <td style="width: 50%;">
-                            <p>
+                            <p style="font-size: 16px; line-height: 21.86px; font-weight: 700; padding-left: 15px">
                                 16 years providing <br>
                                 Effective Software Engineering.
                             </p>
@@ -451,7 +252,8 @@ const sendMail = (req, res = response) => {
             </table>
         </section>
     </footer>
-</div>
+</body>
+</html>
 ` 
     }
 

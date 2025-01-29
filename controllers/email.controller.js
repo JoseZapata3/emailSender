@@ -158,7 +158,7 @@ const sendMail = (req, res = response) => {
 
     .header-text div {
       font-family: 'Manrope', serif !important;
-      color: #ffffff !important;
+      color: light-dark(#ffffff, #ffffff) !important;
     }
 
     .main-header-text div {
@@ -306,61 +306,6 @@ const sendMail = (req, res = response) => {
       font-size: 16px !important;
       line-height: 21.86px !important;
       font-weight: 700 !important;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .header-text div {
-        font-family: 'Manrope', serif !important;
-        color: #ffffff !important;
-      }
-
-      .introducton-text div {
-        color: #383838 !important;
-      }
-
-      .lets-chat a {
-        color: #FFFFFF !important;
-      }
-
-      .posts-header-title div {
-        color: #ffffff !important;
-      }
-
-      .post-title div {
-        color: #1313C3 !important;
-      }
-
-      .post-number {
-        color: #6B6B6B !important;
-      }
-
-      .post-separator {
-        color: #D0D0D0 !important;
-      }
-
-      .post-description div {
-        color: #6B6B6B !important;
-      }
-
-      .Learn-more a {
-        color: #1313B6 !important;
-      }
-
-      .post-separator {
-        color: #FFFFFF !important;
-      }
-
-      .social-media-section div {
-        color: #FFFFFF !important;
-      }
-
-      .company-results div {
-        color: #F4F2E9 !important;
-      }
-
-      .footer-text div {
-        color: #FFFFFF !important;
-      }
     }
   </style>
 </head>

@@ -30,6 +30,9 @@ const sendMail = (req, res = response) => {
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
+    :root{
+        color-scheme: light dark;
+    }
     #outlook a {
       padding: 0;
     }
@@ -158,7 +161,7 @@ const sendMail = (req, res = response) => {
 
     .header-text div {
       font-family: 'Manrope', serif !important;
-      color: light-dark(#ffffff, #ffffff) !important;
+      color: light-dark(#FFFFFF, #FFFFFF) !important;
     }
 
     .main-header-text div {
@@ -179,7 +182,7 @@ const sendMail = (req, res = response) => {
     .introducton-text div {
       width: 260px !important;
       font-family: 'Manrope', serif !important;
-      color: #383838 !important;
+      color: light-dark(#383838, #383838) !important;
       font-size: 14px !important;
       line-height: 22.4px !important;
       font-weight: 400 !important;
@@ -191,7 +194,7 @@ const sendMail = (req, res = response) => {
     }
 
     .lets-chat a {
-      color: #FFFFFF !important;
+      color: light-dark(#FFFFFF, #FFFFFF) !important;
       font-family: 'Manrope', serif !important;
       font-size: 16px !important;
       font-weight: 500 !important;
@@ -210,7 +213,7 @@ const sendMail = (req, res = response) => {
 
     .posts-header-title div {
       font-family: 'Manrope', serif !important;
-      color: #ffffff !important;
+      color: light-dark(#FFFFFF, #FFFFFF) !important;
       font-size: 37px !important;
       line-height: 39px !important;
       font-weight: 400 !important;
@@ -225,14 +228,14 @@ const sendMail = (req, res = response) => {
     .post-title div {
       width: 260px !important;
       font-family: 'Manrope', serif !important;
-      color: #1313C3 !important;
+      color: light-dark(#1313C3, #1313C3) !important;
       font-size: 46px !important;
       line-height: 52px !important;
       font-weight: 400 !important;
     }
 
     .post-number {
-      color: #6B6B6B !important;
+      color: light-dark(#6B6B6B, #6B6B6B) !important;
       font-size: 96px !important;
       line-height: 131.14px !important;
     }
@@ -246,11 +249,11 @@ const sendMail = (req, res = response) => {
 
     .post-separator {
       margin: 5px 0 !important;
-      color: #D0D0D0 !important;
+      color: light-dark(#D0D0D0, #D0D0D0) !important;
     }
 
     .post-description div {
-      color: #6B6B6B !important;
+      color: light-dark(#6B6B6B, #6B6B6B) !important;
       font-family: "Inter", Serif !important;
       font-size: 14px !important;
       line-height: 16.94px !important;
@@ -258,7 +261,7 @@ const sendMail = (req, res = response) => {
     }
 
     .Learn-more a {
-      color: #1313B6 !important;
+      color: light-dark(#1313B6, #1313B6) !important;
       font-family: 'Manrope', serif !important;
       font-size: 14px !important;
       line-height: 19.12px !important;
@@ -266,7 +269,7 @@ const sendMail = (req, res = response) => {
     }
 
     .post-separator {
-      color: #FFFFFF !important;
+      color: light-dark(#FFFFFF, #FFFFFF) !important;
       margin: 0 !important;
       padding: 0 !important;
     }
@@ -276,7 +279,7 @@ const sendMail = (req, res = response) => {
     }
 
     .social-media-section div {
-      color: #FFFFFF !important;
+      color: light-dark(#FFFFFF, #FFFFFF) !important;
       font-family: 'Manrope', serif !important;
       font-size: 18.25px !important;
       line-height: 25.02px;
@@ -284,7 +287,7 @@ const sendMail = (req, res = response) => {
 
     .company-results div {
       font-family: 'Manrope', serif !important;
-      color: #F4F2E9 !important;
+      color: light-dark(#F4F2E9, #F4F2E9) !important;
       font-size: 17px !important;
       line-height: 23.22px !important;
       font-weight: 400 !important;
@@ -302,7 +305,7 @@ const sendMail = (req, res = response) => {
 
     .footer-text div {
       font-family: 'Manrope', serif !important;
-      color: #FFFFFF !important;
+      color: light-dark(#FFFFFF, #FFFFFF) !important;
       font-size: 16px !important;
       line-height: 21.86px !important;
       font-weight: 700 !important;
